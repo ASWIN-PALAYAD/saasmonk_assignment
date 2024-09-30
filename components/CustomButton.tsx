@@ -5,7 +5,7 @@ interface CustomButtonProps {
   bgColor: string;
   textColor: string;
   borderColor?: string;
-  onPress: () => void;
+  onPress?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 const CustomButton = ({

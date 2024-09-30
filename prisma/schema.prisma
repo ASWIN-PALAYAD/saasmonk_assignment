@@ -20,4 +20,14 @@ model Movie {
   totalRating Int      @default(1)
   createdAt   DateTime @default(now())
   updateAt    DateTime @updatedAt
+  reviews     Review[]
+}
+
+model Review {
+  id       String  @id @default(auto()) @map("_id") @db.ObjectId
+  reviewer String?
+  rating   Int
+  review   String
+  Movie    Movie?  @relation(fields: [movieId], references: [id])
+  movieId  String? @db.ObjectId
 }

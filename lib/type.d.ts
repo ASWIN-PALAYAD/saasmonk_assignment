@@ -12,3 +12,4 @@ type ReviewType = {
     rating:number,
     review:string
 }
+

@@ -1,6 +1,5 @@
 import MovieCard from "@/components/MovieCard";
 import { fetchAllMovies } from "@/lib/actions/action";
-import { useEffect, useState } from "react";
 import { CiSearch } from "react-icons/ci";
 
 // const Movies = [
