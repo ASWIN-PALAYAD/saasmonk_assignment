@@ -1,40 +1,46 @@
 import MovieCard from "@/components/MovieCard";
+import { fetchAllMovies } from "@/lib/actions/action";
+import { useEffect, useState } from "react";
 import { CiSearch } from "react-icons/ci";
 
-const Movies = [
-  {
-    id:1,
-    name: "Star Wars: A New Hope",
-    realeaseDate: "1st August 2022",
-    rating: "8.33/10",
-  },
-  {
-    id:2,
-    name: "Star Wars: A New Hope",
-    realeaseDate: "1st August 2022",
-    rating: "8.33/10",
-  },
-  {
-    id:3,
-    name: "Star Wars: A New Hope",
-    realeaseDate: "1st August 2022",
-    rating: "8.33/10",
-  },
-  {
-    id:4,
-    name: "Star Wars: A New Hope",
-    realeaseDate: "1st August 2022",
-    rating: "8.33/10",
-  },
-  {
-    id:5,
-    name: "Star Wars: A New Hope",
-    realeaseDate: "1st August 2022",
-    rating: "8.33/10",
-  },
-];
+// const Movies = [
+//   {
+//     id:1,
+//     name: "Star Wars: A New Hope",
+//     realeaseDate: "1st August 2022",
+//     rating: "8.33/10",
+//   },
+//   {
+//     id:2,
+//     name: "Star Wars: A New Hope",
+//     realeaseDate: "1st August 2022",
+//     rating: "8.33/10",
+//   },
+//   {
+//     id:3,
+//     name: "Star Wars: A New Hope",
+//     realeaseDate: "1st August 2022",
+//     rating: "8.33/10",
+//   },
+//   {
+//     id:4,
+//     name: "Star Wars: A New Hope",
+//     realeaseDate: "1st August 2022",
+//     rating: "8.33/10",
+//   },
+//   {
+//     id:5,
+//     name: "Star Wars: A New Hope",
+//     realeaseDate: "1st August 2022",
+//     rating: "8.33/10",
+//   },
+// ];
 
-export default function Home() {
+export default async function Home() {
+
+  const Movies = await fetchAllMovies()
+  console.log(Movies);
+  
   return (
     <div className="pl-8 pt-5 flex flex-col ">
       <h1 className="font-semibold text-3xl">The best movie reviews sites!</h1>

@@ -1,8 +1,8 @@
 type MovieDetail = {
-    id:number,
+    id:string,
     name:string,
-    realeaseDate:string,
-    rating:string
+    releaseDate:string,
+    totalRating:number
 }
 
 type ReviewType = {
