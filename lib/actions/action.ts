@@ -3,10 +3,11 @@
 import { redirect } from "next/navigation";
 import prisma from "../db";
 
-export const fetchAllMovies = async () => {
+export const fetchAllMovies = async () => { 
   const movies = await prisma.movie.findMany();
   return movies;
 };
+
 
 //for changing date formate
 const formatDate = (dateString: string) => {
@@ -26,14 +27,14 @@ const formatDate = (dateString: string) => {
   return `${day}${getOrdinalSuffix(day)} ${month} ${year}`;
 };
 
-export const addNewMovie = async (formData: {
+export const addNewMovie = async (formData: { 
   name: string;
   releaseDate: string;
 }) => {
   const { name, releaseDate } = formData;
   const newDate = formatDate(releaseDate);
 
-  if (!name || !releaseDate) {
+  if (!name ) {
     return { message: "please fill the details correctly..." };
   }
 
@@ -45,3 +46,5 @@ export const addNewMovie = async (formData: {
   });
   redirect("/");
 };
+
+

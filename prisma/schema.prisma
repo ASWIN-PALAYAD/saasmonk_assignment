@@ -28,6 +28,6 @@ model Review {
   reviewer String?
   rating   Int
   review   String
-  Movie    Movie?  @relation(fields: [movieId], references: [id])
-  movieId  String? @db.ObjectId
+  Movie    Movie  @relation(fields: [movieId], references: [id])
+  movieId  String @db.ObjectId
 }

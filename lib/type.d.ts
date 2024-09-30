@@ -3,11 +3,12 @@ type MovieDetail = {
     name:string,
     releaseDate:string,
     totalRating:number
+    reviews?:ReviewType[]
 }
 
 type ReviewType = {
-    id:number,
-    movieId:number,
+    id:string,
+    movieId:string,
     reviewer?: string,
     rating:number,
     review:string

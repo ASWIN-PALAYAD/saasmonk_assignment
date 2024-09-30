@@ -20,12 +20,14 @@ const AddMovie = () => {
   }
   const handleCreateMovie = async(e:React.FormEvent) => {
       e.preventDefault();
+      console.log(formData);
+      
       const res = await addNewMovie(formData);
 
       if(res?.message){
         setErrorMessage(res.message);
       }
-  };
+  }; 
 
 
   return (
@@ -34,9 +36,9 @@ const AddMovie = () => {
         <h1 className="text-3xl text-gray-700">Add new movie</h1>
         <input
           type="text"
-          name="Movie name"
+          name="name"
           onChange={handleChange}
-          placeholder="Name"
+          placeholder="Movie name"
           className="p-3 w-full  border-2 border-slate-400 rounded-md "
         />
         <input

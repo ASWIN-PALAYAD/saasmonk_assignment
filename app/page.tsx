@@ -37,8 +37,7 @@ import { CiSearch } from "react-icons/ci";
 
 export default async function Home() {
 
-  const Movies = await fetchAllMovies()
-  console.log(Movies);
+  const Movies = await fetchAllMovies() 
   
   return (
     <div className="pl-8 pt-5 flex flex-col ">
