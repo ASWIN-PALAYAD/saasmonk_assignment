@@ -65,13 +65,14 @@ const AddReview = () => {
         </select>
         <input
           type="text"
-         
+          
           name="reviewer"
           placeholder="Your name"
           className="p-3 w-full border-2 border-slate-400 rounded-md "
         />
         <input
           type="number"
+        
           name='rating'
           placeholder="Rating out of 10"
           className="p-3 w-full border-2 border-slate-400 rounded-md "
