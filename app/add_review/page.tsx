@@ -13,7 +13,6 @@ const AddReview = () => {
     review:''
   })
 
-  const [errorMessage, setErrorMessage] = useState('');
 
   const handleChange = (e:React.ChangeEvent<HTMLTextAreaElement>)=> {
     const {name,value}  = e.target;
@@ -66,14 +65,13 @@ const AddReview = () => {
         </select>
         <input
           type="text"
-          onChange={handleChange}
+         
           name="reviewer"
           placeholder="Your name"
           className="p-3 w-full border-2 border-slate-400 rounded-md "
         />
         <input
           type="number"
-          onChange={handleChange}
           name='rating'
           placeholder="Rating out of 10"
           className="p-3 w-full border-2 border-slate-400 rounded-md "
@@ -89,7 +87,7 @@ const AddReview = () => {
         <div className="flex w-full  justify-end">
           <CustomButton
             title="Add new review"
-            onPress={handleAddReview}
+            
             bgColor="#6558F5"
             textColor="white"
           />
