@@ -6,7 +6,7 @@ interface ReviewCardProps {
   review: ReviewType;
 }
 
-const ReviewCard = ({ review }: ReviewCardProps) => {
+const ReviewCard = ( {review} : ReviewCardProps) => {
   return (
     <div className="flex flex-col gap-5 p-3 border-2 border-slate-300 ">
       <div className="flex justify-between">

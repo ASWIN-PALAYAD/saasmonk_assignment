@@ -3,44 +3,48 @@ import React from 'react'
 
 const reviews = [
   {
-    id:1,
-    movieId: 1,
+    id:'1',
+    movieId: '1',
     reviewer:"aswin",
     rating:6,
     review:"nice"
   },
   {
-    id:2,
-    movieId: 1,
-    reviewer:"aswin",
-    rating:6,
-    review:"nice"
-  },
-  {
-    id:3,
-    movieId: 1,
-    reviewer:"aswin",
-    rating:6,
-    review:"nice"
-  },
-  {
-    id:4,
-    movieId: 1,
-    reviewer:"aswin",
-    rating:6,
-    review:"nice"
-  },
-  {
-    id:5,
-    movieId: 1,
+    id:'2',
+    movieId: '1',
     reviewer:"aswin",
     rating:6,
     review:"nice"
   },
   
+  {
+    id:'3',
+    movieId: '1',
+    reviewer:"aswin",
+    rating:6,
+    review:"nice"
+  },
+  {
+    id:'4',
+    movieId: '1',
+    reviewer:"aswin",
+    rating:6,
+    review:"nice"
+  },
+  {
+    id:'5',
+    movieId: '1',
+    reviewer:"aswin",
+    rating:6,
+    review:"nice"
+  },
+  
+
+ 
+  
 ]
 
-const MovieReview = ({params}:{params:{movieId:string}}) => { 
+const MovieReview = () => { 
   return (
     <div className='pl-8 pr-8 pt-5 flex flex-col gap-5'>
      <div className='flex justify-between'>
