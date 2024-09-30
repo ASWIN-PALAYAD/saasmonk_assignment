@@ -2,11 +2,18 @@
 
 import React from "react";
 import CustomButton from "./CustomButton";
+import { useRouter } from "next/navigation";
 
 const Navbar = () => {
-  const handleAddMovie = () => {};
+  const router = useRouter()
 
-  const handleAddReview = () => {};
+  const handleAddMovie = () => {
+    router.push('/add_movie')
+  };
+
+  const handleAddReview = () => {
+    router.push('/add_review')
+  };
 
   return (
     <div className="h-[80px] flex justify-between items-center pl-8 pr-8 bg-[#E3E8ED]">
